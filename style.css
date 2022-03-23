@@ -155,10 +155,9 @@ transition: 0.5s;
     text-transform: uppercase;
 }
 .place-of-work-content p{
-    text-align: center;
-    line-height: 35px;  
-    font-size: 18px;
+    text-align: center;  
     color: black;
+    font-size: 16px;
    
 }
 .tech-companies{
@@ -175,6 +174,9 @@ transition: 0.5s;
 .tech-firm img{
     width: 30%;
     text-align: center;
+}
+.tech-firm p{
+    font-size: 14px;
 }
 /* My projects styling */
 .my-projects{
