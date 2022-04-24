@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Offiong's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,38 +12,28 @@
     <div class="main-container">
         <header>
             <div class="logo">
-                <h4>STARYlite</h4>
+                <h4>OFFIONG</h4>
              </div>
          <nav>
-            <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
-            <label for="nav-checkbox" class="nav-toggle">        
-                <svg class="hamburger-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 283.426 283.426" style="enable-background:new 0 0 283.426 283.426;" xml:space="preserve">
-                <g>
-               <rect x="0" y="40.84" style="fill:#fff;" width="283.426" height="47.735"/>
-               <rect x="0" y="117.282" style="fill:#fff;" width="283.426" height="47.735"/>
-               <rect x="0" y="194.851" style="fill:#fff;" width="283.426" height="47.735"/>
-                </g>
-                </svg>
-                <svg class="close" viewbox="0 0 384 512" width="30" title="times" >
-            <path fill="#fff" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19
-            0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28
-            75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28
-            12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28
-             32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176
-            322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 
-            12.28-32.19 0-44.48L242.72 256z"/>
-               </svg>
-            </label>
-              <ul class="ul-wrap">
+              <ul class="navlinks">
                 <li><a class="nav-link" href="#">Home</a></li>
                 <li><a class="nav-link" href="#About">About</a></li>
                 <li><a class="nav-link" href="#Projects">Projects</a></li>
                 <li><a class="nav-link" href="#Contact">Contact</a></li>
               </ul>
+              <div class="buttons">
+                <button class="nav-toggle"></button>
+                <button class="nav-toggle2" style="display:none;"><span><img class="closeicon" src="/Images/icon-close.svg" alt="" ></span></button>
+              </div>
          </nav>
         </header>
+            <ul class="ul-wrap">
+                <li><a class="nav-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="#About">About</a></li>
+                <li><a class="nav-link" href="#Projects">Projects</a></li>
+                <li><a class="nav-link" href="#Contact">Contact</a></li>
+              </ul>
+      
         <section class="first-container">
            <div class="hero-section">
             <div class="author-profile">
@@ -52,7 +43,7 @@
                <h2 class="full-name">Joy Offiong</h2>
                <h3>A Front-End Web Developer</h3>
             </div>
-            <div>
+            <div style="z-index: 1;">
               <a href="https://twitter.com/JhayOffiong"><img  class="media-handle" src="/Icons SVG/icon-twitter.svg" alt=" twitter-icon"></a>
               <a href="https://github.com/JoyOffiong"><img  class="media-handle"src="/Icons SVG/iconmonstr-github-1.svg" alt=" github icon"></a>
               <a href="https://www.linkedin.com/in/joy-offiong-1b9877178/"><img class="media-handle" src="/Icons SVG/iconmonstr-linkedin-3.svg" alt="linked-in hamburger-icon"></a>
@@ -250,6 +241,7 @@
                 <p>Built by Joy Girl @2022</p>
             </div>
         </footer>
+        <script src="/myScript.js"></script>
     </div>
 </body>
 </html>

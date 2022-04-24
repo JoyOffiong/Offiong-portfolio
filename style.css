@@ -25,14 +25,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1% 40px;
-  background-color: rgb(65, 65, 130);
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  padding: 1%;
+  z-index: 5;
+  width: 100%;
+  /* background-color: rgb(65, 65, 130); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(https://media.istockphoto.com/photos/cyber-security-it-engineer-working-on-protecting-network-against-picture-id1322517295?b=1&k=20&m=1322517295&s=170667a&w=0&h=x4Kmx8fQytr6VPfuKwE381xf-rfiBFctyXvpb7o5ju8=);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; */
-    position: sticky;
+    background-size: cover;
+    position: fixed;
     top: 0;
 }
 .hamburger-icon,
@@ -46,23 +48,25 @@ header {
   color: white;
   font-size: 24px;
 }
-.ul-wrap {
+.navlinks {
   width: 70%;
-}
-.ul-wrap {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-.ul-wrap li {
+
+.navlinks li, .ul-wrap li {
   list-style: none;
 }
-.ul-wrap li a {
+.navlinks li a, .ul-wrap li a {
   text-decoration: none;
   color: rgb(241, 234, 234);
   padding-left: 2rem;
   font-size: 18px;
   transition: 0.5s;
+}
+.ul-wrap{
+  display: none;
 }
 
 /* hero-section styling */
@@ -281,7 +285,7 @@ header {
 
 /* Services styling */
 
-.services-wrapper {
+/* .services-wrapper {
   padding: 40px;
   background-color: blue;
 }
@@ -335,7 +339,7 @@ header {
   width: 50px;
   height: 50px;
   padding-top: 10px;
-}
+} */
 
 /* Contact-form-styling */
 .contact-form {
@@ -418,60 +422,62 @@ textarea {
 /* tablet styling */
 @media (max-width: 1200px) {
   header {
-    padding: 0 2%;
-    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 0;
+    margin-right: 0;
+    position:fixed;
+    width: 100%;
+    z-index:100;
   }
-  .ul-wrap li {
+ .navlinks{
     display: none;
   }
-  header {
-    position: relative;
-  }
-
-  .close,
-  .hamburger-icon {
+  .nav-toggle {
     position: absolute;
-    right: 0;
-    display: block;
     cursor: pointer;
-    margin: 0 0.4rem;
-    top: 20%;
-  }
-  .nav-toggle,
-  .hamburger-icon {
-    display: block;
-    width: 30px;
-    height: 30px;
-  }
-  .close {
-    display: none;
-    width: 30px;
-    height: 30px;
-  }
-  .nav-checkbox:checked ~ label.nav-toggle .close{
-    display: block;
-  }
-  .nav-checkbox:checked ~ .ul-wrap li {
-    display: block;
-  }
-  .nav-checkbox:checked ~ label.nav-toggle .hamburger-icon{
-    display: none;
-  }
-  .nav-checkbox:checked ~ .ul-wrap {
-    position: absolute;
-    flex-direction:column;
-    top: 50px;
-    /* left: 0; */
+    margin: 0rem 2rem;
     right: 0;
-    text-align: center;
-    line-height: 3rem;
-    height: 50vh;
-    background-color:rgb(55, 55, 110);
-    opacity: 0.8;
-    width: 30%;
-    transform: scale(1);
-    font: bold;
+    top: 1rem;
+    display: block;
+   background-image:url(/Images/icon-hamburger.svg); 
+    background-repeat: no-repeat;
+    border-radius: none;
+    width: 2rem;
+    border: none;
+    background-color: transparent;
+    aspect-ratio: 1;
   }
+  .nav-toggle2{
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 2rem;
+    right: 0; 
+    top: 1rem;
+    display: none;
+    border-radius: none;
+    width: 2rem;
+    border: none;
+    background-color: transparent;
+    aspect-ratio: 1;
+  }
+  .ul-wrap {
+    position: fixed;
+    flex-direction:column;
+    right: 0;
+    align-items: none;
+    text-align: center;
+    padding-left: 5%;
+    padding-top: 10%;
+    height: 50vh;
+    width: 100%;
+    display: block;
+    line-height: 3rem;
+    font: bold;
+    transform: translateY(-120%);
+    transition:0.98s ease;
+    background-color: rgb(32, 32, 52);z-index: 76;
+  }
+ 
 
   input,
   textarea {
